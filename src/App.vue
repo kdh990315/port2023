@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Lenis from '@studio-freight/lenis';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  mounted: function () {
+    this.scrollAnimation();
+  },
+  methods: {
+    scrollAnimation() {
+      const lenis = new Lenis({
+        duration: 3,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      })
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import "@/scss/reset.scss";
+
+body {
+  background-color: #313030;
+  overflow-x: hidden;
 }
 </style>
