@@ -6,23 +6,21 @@
 				<p>작업물</p>
 				<div class="script_line"></div>
 			</div>
-			<div class="script_contents">
-				<div class="contents" v-for="(content, index) in scrpitContents" :key="index">
+			<article class="script_contents">
+				<div class="contents" v-for="(content, index) in scrpitContents" :key="index" :class="`content${index + 1}`">
 					<div class="contents_left">
-						<img src="http://placehold.it/700X400" />
+						<div class="script_view">
+							<video :src="content.src" autoplay loop muted></video>
+						</div>
 					</div>
 					<div class="contents_right">
 						<p class="num">{{ index + 1 }}.</p>
 						<div class="line"></div>
 						<h4>{{ content.title }}</h4>
 						<p>{{ content.subText }}</p>
-						<div class="contents_btn_box">
-							<base-button :href="content.siteView">site view</base-button>
-							<base-button :href="content.codeView">code view</base-button>
-						</div>
 					</div>
 				</div>
-			</div>
+			</article>
 		</div>
 	</section>
 </template>
@@ -41,74 +39,54 @@ export default {
 		return {
 			scrpitContents: [
 				{
-					img: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
+					src: "/video/background_star.mp4",
+					title: "Star Background",
+					subText: "Javascript를 이용하여 배경에 별이 반짝거리는 느낌을 연출하였습니다.",
 				},
 				{
-					img: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
+					src: "/video/glitch.mp4",
+					title: "Glitch Efect",
+					subText: "Javascript를 이용하여 텍스트가 버퍼링이나 지지직거리는 느낌을 연출하는 glitch효과를 연출하였습니다.",
 				},
 				{
-					img: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
+					src: "/video/infinite_slide.mp4",
+					title: "Infinite Slide Efect",
+					subText: "Javascript를 이용하여 기본 Slide효과에서 더욱 업그레이드된 무한슬라이드를 만들었습니다.",
 				},
 				{
-					img: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
+					src: "/video/tetrisgame.mp4",
+					title: "Tetris Game",
+					subText: "Javascript를 이용하여 테트리스 게임을 만들었습니다.",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 				{
-					img: "#",
+					src: "#",
 					title: "title dummy text",
 					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-					siteView: "#",
-					codeView: "#",
 				},
 			]
 		}
@@ -118,20 +96,6 @@ export default {
 		scrollAnimation() {
 			const contents = gsap.utils.toArray(".contents");
 
-			// gsap.to(contents, {
-			// 	xPercent: -125 * (contents.length - 1),
-			//     ease: "none",
-			//     scrollTrigger: {
-			//         trigger: "#script",
-			//         start: "top 130px",
-			//         end: "+=9000",
-			//         pin: true,
-			//         scrub: 1,
-			//         markers: false,
-			//         invalidateOnRefresh: true,
-			//         anticipatePin: 1,
-			//     }
-			// });
 			ScrollTrigger.matchMedia({
 				"(min-width: 800px)": function () {
 					gsap.to(contents, {
@@ -219,13 +183,28 @@ export default {
 			.contents {
 				@include center-se;
 				width: 1500px;
-				background-color: beige;
+				height: 650px;
 				margin: 30px 120px 0 0;
+				border-radius: 100px;
 
 				&:last-child {
 					margin: 30px 0 0 0;
 				}
 
+				&.content1 {
+					background-color: #AAC8A7;
+				}
+
+				&.content2 {
+					background-color: #C3EDC0;
+				}
+
+				&.content3 {
+					background-color: #E9FFC2;
+				}
+				&.content4 {
+					background-color: #FDFFAE;
+				}
 
 
 				.contents_left {
@@ -233,8 +212,13 @@ export default {
 					padding: 30px 0;
 					@include center;
 
-					img {
-						border-radius: 50px;
+					.script_view {
+						width: 700px;
+
+						video {
+							width: 90%;
+							border-radius: 50px;
+						}
 					}
 				}
 
@@ -256,21 +240,15 @@ export default {
 					h4 {
 						font-size: 3vw;
 						font-weight: 600;
-						font-family: 'Poppins', sans-serif;
-						margin-bottom: 30px;
+						font-family: "Poppins", sans-serif;
+						margin-top: 35px;
+						margin-bottom: 50px;
 					}
 
 					p {
 						font-size: 1rem;
 						font-weight: 400;
 						line-height: 1.8;
-					}
-
-					.contents_btn_box {
-						width: 300px;
-						margin: 50px auto 0 auto;
-
-						@include center-sb;
 					}
 				}
 			}
@@ -293,7 +271,7 @@ export default {
 
 					.contents_left {
 
-						img {
+						.script_view {
 							width: 400px;
 						}
 					}
@@ -312,10 +290,6 @@ export default {
 						.line {
 							width: 65%;
 							margin: 0 auto 30px auto;
-						}
-
-						.contents_btn_box {
-							margin: 0 auto;
 						}
 					}
 				}

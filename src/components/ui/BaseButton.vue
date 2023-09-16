@@ -13,10 +13,9 @@ export default {
 
 <style lang="scss" scoped>
 a {
-	display: block;
+	display: inline-block;
 	font-size: 1.2rem;
 	color: black;
 	padding: 8px 15px;
-	background-color: #ccc;
 }
 </style>
