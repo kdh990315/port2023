@@ -16,6 +16,7 @@
 							<p class="project_subText">{{ port.subText }}</p>
 							<div class="project_btn_box">
 								<base-button :href="port.siteURL">site view</base-button>
+								<base-button :href="port.gitURL">github view</base-button>
 							</div>
 						</div>
 					</div>
@@ -36,6 +37,7 @@ export default {
 					mainText: "낙시고-낚시 예약 사이트",
 					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다. vue.js를 이용하여 제작하였으며 다양한 API를 사용하였습니다.",
 					siteURL: "https://fishing-reservation-54646.web.app",
+					gitURL: "https://github.com/kdh990315/fishing-reservation.git",
 				},
 				{
 					imgURL: '/images/MileProject.png',
@@ -43,6 +45,8 @@ export default {
 					mainText: "밀리의 서재",
 					subText: "밀리의 서재를 클론코딩하였습니다. ajex로 통해 kakao API를 가져와 사용했습니다.",
 					siteURL: "https://kdh990315.github.io/project06_ajax/",
+					gitURL: "https://github.com/kdh990315/project06_ajax.git",
+
 				},
 				{
 					imgURL: '/images/basicProject.png',
@@ -50,6 +54,8 @@ export default {
 					mainText: "가장 기본적인 사이트",
 					subText: "가장 기본적인 레이아웃과 기능들을 사용하여 작업하였습니다.",
 					siteURL: "https://kdh990315.github.io/basic-site/",
+					gitURL: "https://github.com/kdh990315/basic-site.git",
+
 				},
 				{
 					imgURL: '/images/vueProject1.png',
@@ -57,6 +63,8 @@ export default {
 					mainText: "main 더미텍스트입니다.",
 					subText: "suv 더미텍스트입니다.",
 					siteURL: "#",
+					gitURL: "#",
+
 				},
 			],
 		}

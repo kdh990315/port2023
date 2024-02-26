@@ -58,36 +58,36 @@ export default {
 					title: "Tetris Game",
 					subText: "Javascript를 이용하여 테트리스 게임을 만들었습니다.",
 				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
-				{
-					src: "#",
-					title: "title dummy text",
-					subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
-				},
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
+				// {
+				// 	src: "#",
+				// 	title: "title dummy text",
+				// 	subText: "sub 더미 택스트입니다.sub 더미 택스트입니다.sub 더미 택스트입니다.",
+				// },
 			]
 		}
 	},
@@ -99,15 +99,15 @@ export default {
 			ScrollTrigger.matchMedia({
 				"(min-width: 800px)": function () {
 					gsap.to(contents, {
-						xPercent: -125 * (contents.length - 1),
+						xPercent: -160 * (contents.length - 1),
 						ease: "none",
 						scrollTrigger: {
 							trigger: "#script",
 							start: "top 130px",
-							end: "+=9000",
+							end: "+=12000",
 							pin: true,
 							scrub: 1,
-							markers: false,
+							markers: true,
 							invalidateOnRefresh: true,
 							anticipatePin: 1,
 						}
