@@ -59,7 +59,6 @@ export default {
 					markers: false,
 					onToggle: (self) => {
 						self.isActive ? this.footerisvisible = true : this.footerisvisible = false;
-						console.log(self.isActive)
 					}
 				},
 			});

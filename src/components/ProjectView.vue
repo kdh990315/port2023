@@ -10,11 +10,13 @@
 				<article class="project_content" v-for="(port, index) in projectInfo" :key="index">
 					<span>{{ index + 1 }}.</span>
 					<div class="project_info">
-						<img :src="port.src" :alt="port.alt"/>
-						<p class="project_mainText">{{ port.mainText }}</p>
-						<p class="project_subText">{{ port.subText }}</p>
-						<div class="project_btn_box">
-							<base-button :href="port.siteURL">site view</base-button>
+						<img :src="port.imgURL" :alt="port.imgAlt" />
+						<div class="info_box">
+							<p class="project_mainText">{{ port.mainText }}</p>
+							<p class="project_subText">{{ port.subText }}</p>
+							<div class="project_btn_box">
+								<base-button :href="port.siteURL">site view</base-button>
+							</div>
 						</div>
 					</div>
 				</article>
@@ -29,29 +31,29 @@ export default {
 		return {
 			projectInfo: [
 				{
-					src: "/images/proj1.png",
-					alt: "사이트1",
+					imgURL: '/images/vueProject1.png',
+					imgAlt: '뷰 프로젝트',
+					mainText: "낙시고-낚시 예약 사이트",
+					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다. vue.js를 이용하여 제작하였으며 다양한 API를 사용하였습니다.",
+					siteURL: "https://fishing-reservation-54646.web.app",
+				},
+				{
+					imgURL: '/images/MileProject.png',
+					imgAlt: '밀리의서재 프로젝트',
 					mainText: "밀리의 서재",
 					subText: "밀리의 서재를 클론코딩하였습니다. ajex로 통해 kakao API를 가져와 사용했습니다.",
 					siteURL: "https://kdh990315.github.io/project06_ajax/",
 				},
 				{
-					src: "http://placehold.it/500X300",
-					alt: "사이트2",
-					mainText: "main 더미텍스트입니다.",
-					subText: "suv 더미텍스트입니다.",
-					siteURL: "#",
+					imgURL: '/images/basicProject.png',
+					imgAlt: '베이직 프로젝트',
+					mainText: "가장 기본적인 사이트",
+					subText: "가장 기본적인 레이아웃과 기능들을 사용하여 작업하였습니다.",
+					siteURL: "https://kdh990315.github.io/basic-site/",
 				},
 				{
-					src: "http://placehold.it/500X300",
-					alt: "사이트3",
-					mainText: "main 더미텍스트입니다.",
-					subText: "suv 더미텍스트입니다.",
-					siteURL: "#",
-				},
-				{
-					src: "http://placehold.it/500X300",
-					alt: "사이트4",
+					imgURL: '/images/vueProject1.png',
+					imgAlt: '뷰 프로젝트',
 					mainText: "main 더미텍스트입니다.",
 					subText: "suv 더미텍스트입니다.",
 					siteURL: "#",
@@ -86,7 +88,7 @@ export default {
 			border-radius: 50%;
 		}
 	}
-	
+
 	.project_main {
 		.project_content {
 			width: 100%;
@@ -102,32 +104,43 @@ export default {
 
 			.project_info {
 				position: sticky;
-				
+
 				@include c-center;
 
 				img {
-					margin-bottom: 20px;
 					width: 600px;
+					height: 400px;
+					margin-bottom: 15px;
+					border-radius: 20px;
 				}
 
-				p {
-					color: black;
-				}
+				.info_box {
+					width: 400px;
+					margin-left: 100px;
 
-				.project_mainText {
-					font-size: 1.5rem;
-					font-weight: 900;
-					padding: 5px 0;
-				}
+					p {
+						color: black;
+						text-align: left;
+					}
 
-				.project_subText {
-					font-size: 1rem;
-					text-align: center;
-					padding-top: 5px;
-				}
+					.project_mainText {
+						font-size: 1.96rem;
+						font-weight: 900;
+						padding: 5px 0;
+						text-align: left;
+						margin-bottom: 15px;
+					}
 
-				.project_btn_box {
-					margin-top: 50px;
+					.project_subText {
+						font-size: 1.15rem;
+						padding-top: 5px;
+						text-align: left;
+						line-height: 24px;
+					}
+
+					.project_btn_box {
+						margin-top: 50px;
+					}
 				}
 			}
 
@@ -139,6 +152,7 @@ export default {
 					top: 193px;
 				}
 			}
+
 			&:nth-of-type(2) {
 				background-color: #e7ceb0;
 				top: 275px;
@@ -147,18 +161,20 @@ export default {
 					top: 213px;
 				}
 			}
+
 			&:nth-of-type(3) {
 				background-color: #c5b095;
 				top: 295px;
-				
+
 				@media (max-width: 800px) {
 					top: 233px;
 				}
 			}
+
 			&:nth-of-type(4) {
 				background-color: #8f806e;
 				top: 315px;
-				
+
 				@media (max-width: 800px) {
 					top: 253px;
 				}
@@ -169,11 +185,5 @@ export default {
 	@media (max-width: 800px) {
 		width: 100%;
 		margin: 150px auto 0 auto;
-
-		img {
-			width: calc(100% - 30px);
-			border-radius: 20px;
-		}
 	}
-}
-</style>
+}</style>

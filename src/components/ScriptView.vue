@@ -192,18 +192,36 @@ export default {
 				}
 
 				&.content1 {
-					background-color: #AAC8A7;
+					background-color: #36454F;
 				}
 
 				&.content2 {
-					background-color: #C3EDC0;
+					background-color: #4F5357;
 				}
 
 				&.content3 {
-					background-color: #E9FFC2;
+					background-color: #3F4E57;
 				}
 				&.content4 {
-					background-color: #FDFFAE;
+					background-color: #425358;
+				}
+				&.content5 {
+					background-color: #475357;
+				}
+				&.content6 {
+					background-color: #3F4A4F;
+				}
+				&.content7 {
+					background-color: #4C5358;
+				}
+				&.content8 {
+					background-color: #4A5357;
+				}
+				&.content9 {
+					background-color: #3E4E57;
+				}
+				&.content10 {
+					background-color: #3D4F53;
 				}
 
 
