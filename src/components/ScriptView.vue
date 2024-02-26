@@ -107,7 +107,7 @@ export default {
 							end: "+=12000",
 							pin: true,
 							scrub: 1,
-							markers: true,
+							markers: false,
 							invalidateOnRefresh: true,
 							anticipatePin: 1,
 						}
