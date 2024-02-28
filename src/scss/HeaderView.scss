@@ -168,6 +168,8 @@
 
 						@include c-center;
 
+						flex-direction: column;
+
 						.mobil_menu {
 							position: relative;
 							transform: translate(-120%, 0);
