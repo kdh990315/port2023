@@ -42,7 +42,7 @@ export default {
 				{
 					imgURL: '/images/MileProject.png',
 					imgAlt: '밀리의서재 프로젝트',
-					mainText: "밀리의 서재",
+					mainText: "Millie Library",
 					subText: "밀리의 서재를 클론코딩하였습니다. ajex로 통해 kakao API를 가져와 사용했습니다.",
 					siteURL: "https://kdh990315.github.io/project06_ajax/",
 					gitURL: "https://github.com/kdh990315/project06_ajax.git",
@@ -50,7 +50,7 @@ export default {
 				},
 				{
 					imgURL: '/images/basicProject.png',
-					imgAlt: '베이직 프로젝트',
+					imgAlt: 'Baice Site',
 					mainText: "가장 기본적인 사이트",
 					subText: "가장 기본적인 레이아웃과 기능들을 사용하여 작업하였습니다.",
 					siteURL: "https://kdh990315.github.io/basic-site/",
@@ -60,8 +60,8 @@ export default {
 				{
 					imgURL: '/images/vueProject1.png',
 					imgAlt: '뷰 프로젝트',
-					mainText: "main 더미텍스트입니다.",
-					subText: "suv 더미텍스트입니다.",
+					mainText: "React Site",
+					subText: "넥슨 OPEN API를 사용하여 프로잭트를 제작중에 있습니다. 버튼을 누르시면 현재 제작하고 있는 웹사이트를 확인해보실 수 있습니다.",
 					siteURL: "#",
 					gitURL: "#",
 
@@ -108,6 +108,11 @@ export default {
 				font-size: 5vw;
 				font-weight: 900;
 				padding-left: 30px;
+
+				@media (max-width: 1500px) {
+					font-size: 3vw;
+					padding-left: 10px;
+				}
 			}
 
 			.project_info {
@@ -148,6 +153,68 @@ export default {
 
 					.project_btn_box {
 						margin-top: 50px;
+					}
+				}
+
+				@media (max-width: 1500px) {
+					justify-content: space-around;
+
+					img {
+						width: 500px;
+						height: 300px;
+					}
+					.info_box {
+						width: 300px;
+						margin-left: 0;
+
+						.project_mainText {
+							font-size: 1.65rem;
+						}
+
+						.project_subText {
+							font-size: 1.05rem;
+						}
+					}
+				}
+
+				@media (max-width: 1200px) {
+					flex-direction: column;
+				}
+
+				@media (max-width: 768px) {
+					img {
+						width: calc(100% - 100px);
+					}
+				}
+
+				@media (max-width: 500px) {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+
+					img {
+						width: 300px;
+						height: 200px;
+					}
+
+					.info_box {
+						margin-left: 0;
+
+						.project_mainText {
+							font-size: 1.36rem;
+							text-align: center;
+						}
+
+						.project_subText {
+							font-size: .95rem;
+						}
+
+						.project_btn_box {
+							width: 100%;
+							display: flex;
+							justify-content: space-evenly;
+						}
 					}
 				}
 			}
@@ -194,4 +261,5 @@ export default {
 		width: 100%;
 		margin: 150px auto 0 auto;
 	}
-}</style>
+}
+</style>

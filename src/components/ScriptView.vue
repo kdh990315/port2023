@@ -113,14 +113,14 @@ export default {
 						}
 					});
 				},
-				"(max-width: 799px)": function () {
+				"(max-width: 768px)": function () {
 					gsap.to(contents, {
-						xPercent: -145 * (contents.length - 1),
+						xPercent: -165 * (contents.length - 1),
 						ease: "none",
 						scrollTrigger: {
 							trigger: "#script",
 							start: "top 130px",
-							end: "+=12000",
+							end: "+=5000",
 							pin: true,
 							scrub: 1,
 							markers: false,
@@ -273,7 +273,7 @@ export default {
 		}
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 768px) {
 
 		.script_container {
 			margin: 0 auto;
@@ -286,11 +286,15 @@ export default {
 					padding-bottom: 30px;
 					border-radius: 20px;
 					@include c-center;
-
+					flex-direction: column;
 					.contents_left {
-
+						width: 100%;
 						.script_view {
 							width: 400px;
+
+							video {
+								width: 100%;
+							}
 						}
 					}
 
