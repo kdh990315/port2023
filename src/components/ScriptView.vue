@@ -10,7 +10,7 @@
 				<div class="contents" v-for="(content, index) in scrpitContents" :key="index" :class="`content${index + 1}`">
 					<div class="contents_left">
 						<div class="script_view">
-							<video :src="content.src" autoplay loop muted></video>
+							<video :src="content.src" autoplay loop muted playsinline></video>
 						</div>
 					</div>
 					<div class="contents_right">

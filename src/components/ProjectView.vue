@@ -35,7 +35,7 @@ export default {
 					imgURL: '/images/vueProject1.png',
 					imgAlt: '뷰 프로젝트',
 					mainText: "낙시고-낚시 예약 사이트",
-					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다. vue.js를 이용하여 제작하였으며 다양한 API를 사용하였습니다.",
+					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다.<br> vue.js를 이용하여 제작하였으며 다양한 API를 사용하였습니다. <br> 로그인, 선박등록, 예약 기능을 사용할 수 있습니다.",
 					siteURL: "https://fishing-reservation-54646.web.app",
 					gitURL: "https://github.com/kdh990315/fishing-reservation.git",
 				},
@@ -58,8 +58,8 @@ export default {
 
 				},
 				{
-					imgURL: '/images/vueProject1.png',
-					imgAlt: '뷰 프로젝트',
+					imgURL: '/images/react_img.png',
+					imgAlt: '리액트 프로젝트',
 					mainText: "React Site",
 					subText: "넥슨 OPEN API를 사용하여 프로잭트를 제작중에 있습니다. 버튼을 누르시면 현재 제작하고 있는 웹사이트를 확인해보실 수 있습니다.",
 					siteURL: "#",
