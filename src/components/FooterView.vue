@@ -181,7 +181,7 @@ export default {
 				}
 
 				p {
-					font-size: 1rem;
+					font-size: .85rem;
 				}
 			}
 
@@ -197,6 +197,11 @@ export default {
 
 						em {
 							font-size: 0.7rem;
+							font-size: 0.7rem;
+							display: block;
+							margin-top: 5px;
+							margin-left: 0;
+							line-height: 1.5;
 						}
 					}
 				}

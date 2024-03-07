@@ -40,7 +40,6 @@
 						<a :href="icon.href">{{ icon.text }}</a>
 					</div>
 				</div>
-
 			</div>
 		</aside>
 	</section>
@@ -61,13 +60,12 @@ export default {
 			],
 			icons: [
 				{ href: 'https://instagram.com/dd_dodd_odo?igshid=MzRlODBiNWFlZA==', iconName: "fa-brands fa-square-instagram", text: '인스타그램 바로 가기' },
-				{ href: 'https://blog.naver.com/dh_dv_note', iconName: "fa-brands fa-blogger", text: '개인 블로그 바로가기'  },
+				{ href: '#', iconName: "fa-brands fa-blogger", text: '준비중입니다'},
 				{ href: '#', iconName: "fa-solid fa-square-envelope", text: 'kdh990315@naver.com'},
 				{ href: '#', iconName: "fa-solid fa-square-phone", text: '010 - 5509 - 3095'},
 			],
 
 			isvisible: false,
-
 		}
 	},
 	methods: {

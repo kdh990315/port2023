@@ -40,13 +40,20 @@ export default {
 					gitURL: "https://github.com/kdh990315/fishing-reservation.git",
 				},
 				{
+					imgURL: '/images/reactProject1.png',
+					imgAlt: '리액트 프로젝트',
+					mainText: "피파온라인 전적검색 사이트",
+					subText: "넥슨 OPEN API를 사용하여 프로잭트를 제작중에 있습니다. 버튼을 누르시면 현재 제작하고 있는 웹사이트를 확인해보실 수 있습니다.",
+					siteURL: "https://fc-online-85987.web.app/",
+					gitURL: "https://github.com/kdh990315/fc-online",
+				},
+				{
 					imgURL: '/images/MileProject.png',
 					imgAlt: '밀리의서재 프로젝트',
 					mainText: "Millie Library",
 					subText: "밀리의 서재를 클론코딩하였습니다. ajex로 통해 kakao API를 가져와 사용했습니다.",
 					siteURL: "https://kdh990315.github.io/project06_ajax/",
 					gitURL: "https://github.com/kdh990315/project06_ajax.git",
-
 				},
 				{
 					imgURL: '/images/basicProject.png',
@@ -55,15 +62,6 @@ export default {
 					subText: "가장 기본적인 레이아웃과 기능들을 사용하여 작업하였습니다.",
 					siteURL: "https://kdh990315.github.io/basic-site/",
 					gitURL: "https://github.com/kdh990315/basic-site.git",
-
-				},
-				{
-					imgURL: '/images/react_img.png',
-					imgAlt: '리액트 프로젝트',
-					mainText: "React Site",
-					subText: "넥슨 OPEN API를 사용하여 프로잭트를 제작중에 있습니다. 버튼을 누르시면 현재 제작하고 있는 웹사이트를 확인해보실 수 있습니다.",
-					siteURL: "#",
-					gitURL: "#",
 
 				},
 			],
@@ -111,6 +109,11 @@ export default {
 
 				@media (max-width: 1500px) {
 					font-size: 3vw;
+					padding-left: 10px;
+				}
+
+				@media (max-width: 800px) {
+					font-size: 6vw;
 					padding-left: 10px;
 				}
 			}
