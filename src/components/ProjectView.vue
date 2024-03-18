@@ -51,9 +51,9 @@ export default {
 					imgURL: '/images/MileProject.png',
 					imgAlt: '밀리의서재 프로젝트',
 					mainText: "Millie Library",
-					subText: "밀리의 서재를 클론코딩하였습니다. ajex로 통해 kakao API를 가져와 사용했습니다.",
-					siteURL: "https://kdh990315.github.io/project06_ajax/",
-					gitURL: "https://github.com/kdh990315/project06_ajax.git",
+					subText: "밀리의 서재를 순수 자바스크립트로 클론코딩하였습니다. <br>통상적으로 가장 많이 쓰이는 기능들(TapMenum, swiper, scrollEvent, slider 등)을 활용하여 제작하였습니다.",
+					siteURL: "https://kdh990315.github.io/millie-project/",
+					gitURL: "https://github.com/kdh990315/millie-project",
 				},
 				{
 					imgURL: '/images/basicProject.png',
