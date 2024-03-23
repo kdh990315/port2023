@@ -13,7 +13,7 @@
 						<img :src="port.imgURL" :alt="port.imgAlt" />
 						<div class="info_box">
 							<p class="project_mainText">{{ port.mainText }}</p>
-							<p class="project_subText">{{ port.subText }}</p>
+							<p class="project_subText" v-html="port.subText"></p>
 							<div class="project_btn_box">
 								<base-button :href="port.siteURL">site view</base-button>
 								<base-button :href="port.gitURL">github view</base-button>
@@ -35,7 +35,7 @@ export default {
 					imgURL: '/images/vueProject1.png',
 					imgAlt: '뷰 프로젝트',
 					mainText: "낙시고-낚시 예약 사이트",
-					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다.<br> vue.js를 이용하여 제작하였으며 다양한 API를 사용하였습니다. <br> 로그인, 선박등록, 예약 기능을 사용할 수 있습니다.",
+					subText: "저의 취미를 살려서 낚시 예약 사이트를 제작하였습니다. \n\nVue.js를 이용하여 제작하였으며 KaKao map API를 사용하였습니다.\n\n Github에 프로젝트의 대한 설명과 주요기능을 보기 쉽게 정리하였습니다.",
 					siteURL: "https://fishing-reservation-54646.web.app",
 					gitURL: "https://github.com/kdh990315/fishing-reservation.git",
 				},
@@ -51,7 +51,7 @@ export default {
 					imgURL: '/images/MileProject.png',
 					imgAlt: '밀리의서재 프로젝트',
 					mainText: "Millie Library",
-					subText: "밀리의 서재를 순수 자바스크립트로 클론코딩하였습니다. <br>통상적으로 가장 많이 쓰이는 기능들(TapMenum, swiper, scrollEvent, slider 등)을 활용하여 제작하였습니다.",
+					subText: "밀리의 서재를 순수 자바스크립트로 클론코딩하였습니다.\n\n통상적으로 가장 많이 쓰이는 기능들(TapMenum, swiper, scrollEvent, slider 등)을 활용하여 제작하였습니다.\n\n Github에 프로젝트의 대한 설명과 주요기능을 보기 쉽게 정리하였습니다.",
 					siteURL: "https://kdh990315.github.io/millie-project/",
 					gitURL: "https://github.com/kdh990315/millie-project",
 				},
@@ -148,10 +148,11 @@ export default {
 					}
 
 					.project_subText {
-						font-size: 1.15rem;
+						font-size: 0.95rem;
 						padding-top: 5px;
 						text-align: left;
-						line-height: 24px;
+						line-height: 20px;
+						white-space: pre-wrap;
 					}
 
 					.project_btn_box {
